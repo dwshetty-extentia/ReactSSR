@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+  
+body {
+    font-family: Roboto, Helvatica, sans-serif;
+    font-size: 2rem;
+    line-height: 1.65;
+    color: #333;
+    margin: 5%;
+    text-align: center;
+}
+
+h1 {
+    line-height: 1.145;
+    margin-bottom: 5vh;
+    font-weight: bold;
+    color: green;
+}
+
+button {
+    font-weight: bold;
+    padding: 1%;
+    border-radius: 10%;
+}
+
+hr {
+    border-width: 1px;
+    border-style: dashed;
+    margin: 2vh auto;
+}
+
+.filter {
+    display: block;
+    margin-bottom: 1vh;
+}
+  
+.filter span {
+    cursor: pointer;
+    outline: none;
+}
+
+ul {
+    list-style: none;
+    margin-top: 2vh;
+}
+
+li {
+    font-style: italic;
+    margin-bottom: 1vh;
+}
+
+li:before {
+    padding-right: 0.5vw;
+}
+
+li[done='false']:before {
+    content: '\2613';
+    color: red;
+}
+
+li[done='true']:before {
+    content: '\2713';
+    color: green;
+}
+
+.todoListItem_value {
+    display: inline-block;
+    width: 33.33%;
+    text-align: start;
+}
+
+.todoListItem_value > span {
+    cursor: pointer;
+    outline: none;
+}
+
+.todoListItem_value_delete {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.todoListItem_value_delete:after {
+    content: '\2612';
+    color: red;
+}
+
+.input_container {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+    margin-bottom: 2.5%;
+}
+
+.input_label {
+    margin: 0 2vh;
+    position: absolute;
+    transition: font-size 0.25s ease-in-out, color 0.25s ease-in-out, transform 0.5s ease;
+    padding-bottom: 0.25vw;
+    z-index: -1;
+}
+
+.input_label.input_label_modify {
+    z-index: 0;
+    font-size: 75%;
+    color: gray;
+    transform: translateY(-75%);
+} 
+
+input {
+    margin: 0 2vh;
+    border: 0 solid;
+    border-bottom-width: 2px;
+    outline: none;
+    background: transparent;
+    padding-bottom: 0.25vw;
+}
